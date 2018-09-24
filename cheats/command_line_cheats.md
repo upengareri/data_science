@@ -1,10 +1,11 @@
-## Command Line Cheatsheet (Mac Terminal)
+## Command line cheat sheet (Mac Terminal)
 
 	SHORTCUTS
+	
 
-	ctrl + c 						Kill process
+ctrl + c 						Kill process
 
-	ctrl + u 						Delete line
+ctrl + u 						Delete line
 
 	
 
