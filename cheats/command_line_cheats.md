@@ -3,9 +3,9 @@
 	SHORTCUTS
 	
 
-ctrl + c 						Kill process
+<kbd>**ctrl + c**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Kill process
 
-ctrl + u 						Delete line
+<kbd>**ctrl + u**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Delete line
 
 	
 
