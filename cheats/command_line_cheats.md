@@ -1,4 +1,4 @@
-## Command line cheat sheet (Mac Terminal)
+## Command Line Cheat Sheet (Mac Terminal)
 
 	SHORTCUTS
 	
