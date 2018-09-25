@@ -4,3 +4,7 @@
 #### Heading4
 ##### Heading5
 
+How to give space between words in Markdown?
+
+Ans: Use <kbd>&emsp;</kbd>
+
