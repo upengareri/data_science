@@ -58,9 +58,47 @@
 
 &emsp;&emsp;<kbd>**cp -r dir1 dir2**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Copy dir1 to dir2
 
+
 	FILES BASIC
 
+&emsp;&emsp;<kbd>**touch file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Create file
 
+&emsp;&emsp;<kbd>**rm file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Remove file
+
+&emsp;&emsp;<kbd>**rm -f file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Remove file (f:force)
+
+&emsp;&emsp;<kbd>**cp file1 file2**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Copy file1 to file2
+
+&emsp;&emsp;<kbd>**mv oldname newname**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Rename file
+
+&emsp;&emsp;<kbd>**mv old_location new_location**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Move file (old_location and new_location are the paths)
+
+&emsp;&emsp;<kbd>**more file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Output contents of file 'file'
+
+&emsp;&emsp;<kbd>**head file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Output first 10 lines of file 'file'
+
+&emsp;&emsp;<kbd>**tail file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Output last 10 lines of file 'file'
+
+&emsp;&emsp;<kbd>ln -s file1 new_location</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Create shortcut/symbolic link of file1 to new_location 
+
+
+	COMPRESSION
+_Note_: 
+	***tar*** is a file archiving technique i.e combining multiple files into a single file. It is helpful for transferring multiple files at once over internet as it is simple and fast.
+	***gzip*** is a file compression technique for large files. It is helpful for transferrring large files from source to destination as it reduces the size of the file. It can later be decompressed at the destination.
+
+
+&emsp;&emsp;<kbd>**tar -cf files.tar file1 file2**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Create a tar file 'files.tar' with 'file1' and 'file2'
+
+&emsp;&emsp;<kbd>**tar -xf files.tar**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Extract files from 'files.tar'
+
+&emsp;&emsp;<kbd>**tar -czf files.tar.gz file1 file2**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Create a tar file with gzip compression
+
+&emsp;&emsp;<kbd>**tar -xzf files.tar.gz**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Extract files from 'files.tar.gz'
+
+&emsp;&emsp;<kbd>**gzip file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Compress file with gzip technique
+
+&emsp;&emsp;<kbd>**gzip -d file.gz**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Decompress 'file.gz'
 
 
 
