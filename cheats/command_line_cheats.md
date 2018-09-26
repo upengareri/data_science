@@ -44,8 +44,6 @@
 
 &emsp;&emsp;<kbd>**rm -rf dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Remove directory 'dir' (f:force)
 
-&emsp;&emsp;<kbd>**rm -r dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Remove directory 'dir'
-
 &emsp;&emsp;<kbd>**cd**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Change to home directory
 
 &emsp;&emsp;<kbd>**cd dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Change to sub-directory (i.e. move to child directory within the present working directory)
@@ -79,13 +77,13 @@
 
 &emsp;&emsp;<kbd>**tail file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Output last 10 lines of file 'file'
 
-&emsp;&emsp;<kbd>ln -s file1 new_location</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Create shortcut/symbolic link of file1 to new_location 
+&emsp;&emsp;<kbd>**ln -s file1 new_location**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Create shortcut/symbolic link of file1 to new_location 
 
 
 	COMPRESSION
-_Note_: 
-	***tar*** is a file archiving technique i.e combining multiple files into a single file. It is helpful for transferring multiple files at once over internet as it is simple and fast.
-	***gzip*** is a file compression technique for large files. It is helpful for transferrring large files from source to destination as it reduces the size of the file. It can later be decompressed at the destination.
+_Note_: ***tar*** is a file archiving technique i.e combining multiple files into a single file. It is helpful for transferring multiple files at once over internet as it is simple and fast.
+	
+***gzip*** is a file compression technique for large files. It is helpful for transferrring large files from source to destination as it reduces the size of the file. It can later be decompressed at the destination.
 
 
 &emsp;&emsp;<kbd>**tar -cf files.tar file1 file2**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Create a tar file 'files.tar' with 'file1' and 'file2'
@@ -99,6 +97,19 @@ _Note_:
 &emsp;&emsp;<kbd>**gzip file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Compress file with gzip technique
 
 &emsp;&emsp;<kbd>**gzip -d file.gz**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Decompress 'file.gz'
+
+
+	SYSTEM BASIC
+
+&emsp;&emsp;<kbd>**date**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Show date and time
+
+&emsp;&emsp;<kbd>**uptime**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Shows system uptime i.e time since boot
+
+&emsp;&emsp;<kbd>**du -sh \***</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Display disk usage (here * means all files and directories within the directory or path)
+
+
+
+
 
 
 
