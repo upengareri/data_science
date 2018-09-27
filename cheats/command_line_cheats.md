@@ -1,26 +1,30 @@
 ## Command Line Cheat Sheet (Mac Terminal)
 
+
+aa|bb|cc
+
+ee|ff|gg 
+
 	SHORTCUTS
-	
 
-&emsp;&emsp;<kbd>**ctrl + c**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Kill process (running process will be terminated)
+&emsp;&emsp;<kbd>**ctrl + c**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Kill process (running process will be terminated)
 
-&emsp;&emsp;<kbd>**ctrl + u**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Delete line
+&emsp;&emsp;<kbd>**ctrl + u**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Delete line
 
-&emsp;&emsp;<kbd>**ctrl + a**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Move to beginning of line
+&emsp;&emsp;<kbd>**ctrl + a**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Move to beginning of line
 
-&emsp;&emsp;<kbd>**ctrl + e**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Move to end of line
+&emsp;&emsp;<kbd>**ctrl + e**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Move to end of line
 
 
 	COMMAND HISTORY
 
-&emsp;&emsp;<kbd>**history**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Show command history
+&emsp;&emsp;<kbd>**history**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; Show command history
 
-&emsp;&emsp;<kbd>**UP (arrow key)**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; See previous command
+&emsp;&emsp;<kbd>**UP (arrow key)**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; See previous command
 
 &emsp;&emsp;<kbd>**DOWN (arrow key)**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; See next command (if any)
 	
-&emsp;&emsp;<kbd>**ctrl + r**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Search recently used commands
+&emsp;&emsp;<kbd>**ctrl + r**</kbd>&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp; Search recently used commands
 
 &emsp;&emsp;<kbd>**!!**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Repeat last command
 
