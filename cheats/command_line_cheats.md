@@ -16,7 +16,7 @@
 
 &emsp;&emsp;<kbd>**history**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; Show command history
 
-&emsp;&emsp;<kbd>**UP (arrow key)**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; See previous command
+&emsp;&emsp;<kbd>**UP (arrow key)**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; See previous command
 
 &emsp;&emsp;<kbd>**DOWN (arrow key)**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; See next command (if any)
 	
