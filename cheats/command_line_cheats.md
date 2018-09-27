@@ -90,7 +90,7 @@ _Note_: ***tar*** is a file archiving technique i.e combining multiple files int
 
 &emsp;&emsp;<kbd>**tar -xf files.tar**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Extract files from 'files.tar'
 
-&emsp;&emsp;<kbd>**tar -czf files.tar.gz file1 file2**</kbd>&emsp;&nbsp;&nbsp; Create a tar file with gzip compression
+&emsp;&emsp;<kbd>**tar -czf files.tar.gz file1 file2**</kbd>&emsp;&nbsp;&nbsp;&nbsp; Create a tar file with gzip compression
 
 &emsp;&emsp;<kbd>**tar -xzf files.tar.gz**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Extract files from 'files.tar.gz'
 
@@ -105,7 +105,7 @@ _Note_: ***tar*** is a file archiving technique i.e combining multiple files int
 
 &emsp;&emsp;<kbd>**uptime**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Shows system uptime i.e time since boot
 
-&emsp;&emsp;<kbd>**du -sh \***</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; Display disk usage (here * means all files and directories within the&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; directory/path)
+&emsp;&emsp;<kbd>**du -sh \***</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; Display disk usage (here * means all files and directories within &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;the directory/path)
 
 
 
