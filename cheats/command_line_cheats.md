@@ -105,7 +105,7 @@ _Note_: ***tar*** is a file archiving technique i.e combining multiple files int
 
 &emsp;&emsp;<kbd>**uptime**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Shows system uptime i.e time since boot
 
-&emsp;&emsp;<kbd>**du -sh \***</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; Display disk usage (here * means all files and directories within &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;the directory/path)
+&emsp;&emsp;<kbd>**du -sh \***</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; Display disk usage (here * means all files and directories within &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;the directory/path)
 
 
 
