@@ -38,15 +38,15 @@
 
 &emsp;&emsp;<kbd>**pwd**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Present working directory
 
-&emsp;&emsp;<kbd>**mkdir dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp; Make directory 'dir'
+&emsp;&emsp;<kbd>**mkdir dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Make directory 'dir'
 
-&emsp;&emsp;<kbd>**rm -r dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp; Remove directory 'dir'
+&emsp;&emsp;<kbd>**rm -r dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remove directory 'dir'
 
-&emsp;&emsp;<kbd>**rm -rf dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; Remove directory 'dir' (f:force)
+&emsp;&emsp;<kbd>**rm -rf dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; Remove directory 'dir' (f:force)
 
 &emsp;&emsp;<kbd>**cd**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp; Change to home directory
 
-&emsp;&emsp;<kbd>**cd dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp; Change to sub-directory (i.e. move to child directory within the present &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;working directory)
+&emsp;&emsp;<kbd>**cd dir**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change to sub-directory (i.e. move to child directory within the present &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;working directory)
 	`cd dir/dir2` jump to deeper sub-directories directly
 
 &emsp;&emsp;<kbd>**cd ..**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Jump from present working working directory to parent directory (i.e directory &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;just above it)
@@ -54,22 +54,22 @@
 
 &emsp;&emsp;<kbd>**cd -**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; Switch to previous working directory
 
-&emsp;&emsp;<kbd>**cp -r dir1 dir2**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; Copy dir1 to dir2
+&emsp;&emsp;<kbd>**cp -r dir1 dir2**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; Copy dir1 to dir2
 
 
 	FILES BASIC
 
-&emsp;&emsp;<kbd>**touch file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Create file
+&emsp;&emsp;<kbd>**touch file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Create file
 
-&emsp;&emsp;<kbd>**rm file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;Remove file
+&emsp;&emsp;<kbd>**rm file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;Remove file
 
-&emsp;&emsp;<kbd>**rm -f file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; Remove file (f:force)
+&emsp;&emsp;<kbd>**rm -f file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; Remove file (f:force)
 
-&emsp;&emsp;<kbd>**cp file1 file2**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Copy file1 to file2
+&emsp;&emsp;<kbd>**cp file1 file2**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Copy file1 to file2
 
-&emsp;&emsp;<kbd>**mv oldname newname**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rename file
+&emsp;&emsp;<kbd>**mv oldname newname**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rename file
 
-&emsp;&emsp;<kbd>**mv old_location new_location**</kbd>&emsp;&emsp;&nbsp;&nbsp; Move file (old_location and new_location are the paths)
+&emsp;&emsp;<kbd>**mv old_location new_location**</kbd>&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; Move file (old_location and new_location are the paths)
 
 &emsp;&emsp;<kbd>**more file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Output contents of file 'file'
 
@@ -77,7 +77,7 @@
 
 &emsp;&emsp;<kbd>**tail file**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Output last 10 lines of file 'file'
 
-&emsp;&emsp;<kbd>**ln -s file1 new_location**</kbd>&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create shortcut/symbolic link of file1 to new_location 
+&emsp;&emsp;<kbd>**ln -s file1 new_location**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create shortcut/symbolic link of file1 to new_location 
 
 
 	COMPRESSION
