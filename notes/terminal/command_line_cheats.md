@@ -101,7 +101,7 @@ _Note_: ***tar*** is a file archiving technique i.e combining multiple files int
 
 > To unzip _.zip_ file first install unzip using `brew install unzip`
 
-&emsp;&emsp;<kdb>unzip -q item.zip</kdb>
+&emsp;&emsp;<kbd>unzip -q item.zip</kbd>
 >Note: -q is for unzipping without printing details
 
 	SYSTEM BASIC
