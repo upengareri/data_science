@@ -99,6 +99,10 @@ _Note_: ***tar*** is a file archiving technique i.e combining multiple files int
 &emsp;&emsp;<kbd>**gzip -d file.gz**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; Decompress 'file.gz'
 
 
+> To unzip _.zip_ file first install unzip using `brew install unzip`
+	unzip -q item.zip
+	Note: -q is for unzipping without printing details
+
 	SYSTEM BASIC
 
 &emsp;&emsp;<kbd>**date**</kbd>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Show date and time
