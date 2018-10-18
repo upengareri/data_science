@@ -1,6 +1,6 @@
 ---
 layout: single
-title: <span style="color:#ABB2B9">Github Cheatsheet</span>
+title: Github Cheatsheet
 date: 2018-10-16
 
 ---
@@ -17,6 +17,7 @@ date: 2018-10-16
 
 ### Clone an existing repository
 Cloning is the process of downloading a copy of the repository from a server.
+
 &emsp;&emsp;`git clone [repository url]`
 
 > _Note: HTTPS is the recommended url. You might be asked for your Github username and password._<br/>
@@ -135,7 +136,8 @@ To see art tree of all branches:&emsp; `git log --graph --oneline --decorate --a
 &emsp;&emsp;`git reset --hard HEAD^` 
 
 ### Save current changes, without having to stage or commit 
-&emsp;&emsp;`git stash` [>This is done in case you are wor]ing on something messy and let's say your boss
+&emsp;&emsp;`git stash` 
+>This is done in case you are wor]ing on something messy and let's say your boss
 pops out of nowhere and now you have to show him/her your working feature. You can thus
 use this command to save all your local and stage changes somewhere, and now you are on last clean commit.
 
