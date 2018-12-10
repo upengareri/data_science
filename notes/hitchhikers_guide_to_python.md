@@ -1,4 +1,8 @@
+
+Hitchhiker's guide to python is not about teaching python. It is more of a guide to the best practices and guidelines to master the language. [More info on https://docs.python-guide.org/]
+
 ## My takeaways
+This page is my notes from the book.
 
 ### Tips
 
