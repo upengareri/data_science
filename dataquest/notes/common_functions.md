@@ -1,6 +1,6 @@
 ### String operations
 
-1. [string.replace(old_str, new_str)](https://docs.python.org/3/library/stdtypes.html#str.replace)
+1. [str.replace()](https://docs.python.org/3/library/stdtypes.html#str.replace)
 
 ```
 test_data = ["(1951)","c. 1915",
@@ -23,4 +23,11 @@ for data in test_data:
 > Good thing about this method is it will return old string if nothing found to be replaced
 
 2. [str.split()](https://docs.python.org/3/library/stdtypes.html#str.split)
-
+```
+string = "upendar gareri"
+split_string = string.split()
+Output: ['upendar', 'gareri']
+string2 = "1990-1992"
+print(string2.split("-"))
+Output: ["1990", "1992"]
+```
