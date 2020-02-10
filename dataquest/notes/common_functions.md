@@ -24,10 +24,17 @@ for data in test_data:
 
 2. [str.split()](https://docs.python.org/3/library/stdtypes.html#str.split)
 ```
-string = "upendar gareri"
+string = "data science"
 split_string = string.split()
-Output: ['upendar', 'gareri']
+Output: ['data', 'science']
 string2 = "1990-1992"
 print(string2.split("-"))
 Output: ["1990", "1992"]
+```
+
+3. [str.startswith()](https://docs.python.org/3/library/stdtypes.html#str.startswith)
+```
+string = "DataScience"
+string.startswith("data")
+Output: False
 ```
