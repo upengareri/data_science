@@ -16,7 +16,13 @@
     HAVING
     ORDER BY
     ```
-- `JOIN` puts two or more table horizontally
+
+- The `CASE` statement is SQL's way of handling if/then logic. 
+
+> The `CASE` statement always goes in the SELECT clause
+> `CASE` must include the following components: `WHEN`, `THEN`, and `END`. `ELSE` is an optional component.
+
+- `JOIN` puts two or more tables horizontally
 - For `UNION` both tables must have same number of columns as well as data types
 - `UNION` puts two or more table vertically in stack
 - `UNION` drops of the duplicate rows and to include all rows we use `UNION ALL`
@@ -96,6 +102,36 @@ The correct date format for sorting is `YYYY-MM-DD` and this example of converti
 
 `7.2` LOWER(str)  --> lowercase string
 
-  
+-----------------------
 
+### NOTE THE DIFFERENCE
+
+1. `COUNT` and `GROUP BY` `COUNT` 
+
+between
+
+```
+SELECT COUNT(state)
+  FROM benn.college_football_players
+```
+and
+
+```
+SELECT state, COUNT(state)
+  FROM benn.college_football_players
+ GROUP BY 1
+```
+> `COUNT` with `GROUP BY` gives the count of each group.
+> Mostly used in conjunction with `CASE`
+
+e.g
+```
+SELECT CASE WHEN state IN ('CA', 'OR', 'WA') THEN 'West Coast'
+            WHEN state = 'TX' THEN 'Texas'
+            ELSE 'Other' END AS arbitrary_regional_designation,
+            COUNT(1) AS players
+  FROM benn.college_football_players
+ WHERE weight >= 300
+ GROUP BY 1
+```
 
