@@ -7,3 +7,7 @@ In that case we can either use -
 * _SQL database_ to store onto hard drive instead of RAM or 
 * _Distributed System_ to distribute the data to multiple machines
 
+#### What is Amazon EC2?
+It stands for Elastic Compute Cloud.
+
+In simple terms, we can say it as a virtual box running through an internet connection. That is, it is a machine with an operating system and hardware components (RAM, Cores etc.) of our choice at the server side. With EC2 we can create as many virtual servers as we want.
