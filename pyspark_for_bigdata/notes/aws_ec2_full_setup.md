@@ -1,14 +1,15 @@
 ## AWS EC2 PySpark Setup PLAN
 
-1. Create EC2 instance on AWS
-2. Use SSH to connect to EC2 over internet (for Mac)
-3. Set-up Spark and Jupyter on EC2 instance
+    1. Create EC2 instance on AWS
+    2. Use SSH to connect to EC2 over internet (for Mac)
+    3. Set-up Spark and Jupyter on EC2 instance
 
 So, let's get started.
 
 ### 1. Create EC2 instance on AWS
 
 * Login to AWS Console --> go to ec2 --> create instance
+    
     * __OS__: select machine image (Ubuntu)
     * __CPU__: select instance type (free version with 1 2.5 GHz Intel Xeon CPU and 1GB memory)
     * __NUMBER OF INSTANCES__: select default instance details (i.e number of instance = 1, for free version)
@@ -30,7 +31,7 @@ All we had to do was create an instance and download the `private RSA key`.
 
     `ssh -i downloaded_rsa_filename ubuntu@DNS_ADDRESS`
 
-> _Change downloaded_rsa_filename and DNS_ADDRESS with the right values_.
+> _Change __downloaded_rsa_filename__ and __DNS_ADDRESS__ with the right values_.
 
 That's it for STEP 2.
 
@@ -46,36 +47,36 @@ Below is a bash script that I used to achieve the above goal -
 #!/bin/bash
 
 echo 'sudo apt-get update'
-sudo apt-get update &> /dev/null
+sudo apt-get update > /dev/null
 
 echo 'sudo apt install python3-pip -y'
-sudo apt install python3-pip -y &> /dev/null
+sudo apt install python3-pip -y > /dev/null
 
 echo 'pip3 install jupyter'
-pip3 install jupyter &> /dev/null
+pip3 install jupyter > /dev/null
 
 echo 'sudo apt-get install default-jre -y'
-sudo apt-get install default-jre -y &> /dev/null
+sudo apt-get install default-jre -y > /dev/null
 
 echo 'sudo apt-get install scala -y'
-sudo apt-get install scala -y &> /dev/null
+sudo apt-get install scala -y > /dev/null
 
 echo 'pip3 install py4j'
-pip3 install py4j &> /dev/null
+pip3 install py4j > /dev/null
 
 echo 'wget http://archive.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz'
-wget http://archive.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz &> /dev/null
+wget http://archive.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz > /dev/null
 
 echo 'sudo tar -zxvf spark-2.4.5-bin-hadoop2.7.tgz'
-sudo tar -zxvf spark-2.4.5-bin-hadoop2.7.tgz &> /dev/null
+sudo tar -zxvf spark-2.4.5-bin-hadoop2.7.tgz > /dev/null
 
 echo 'sudo rm -r spark-2.4.5-bin-hadoop2.7.tgz'
-sudo rm -r spark-2.4.5-bin-hadoop2.7.tgz &> /dev/null
+sudo rm -r spark-2.4.5-bin-hadoop2.7.tgz > /dev/null
  
 cd ~
 
 echo 'pip3 install findspark'
-pip3 install findspark &> /dev/null
+pip3 install findspark > /dev/null
 
 cd ~
 
@@ -83,7 +84,7 @@ echo 'export PATH=$PATH:~/.local/bin'
 export PATH=$PATH:~/.local/bin
 
 echo 'jupyter notebook --generate-config'
-jupyter notebook --generate-config &> /dev/null
+jupyter notebook --generate-config > /dev/null
 
 cd ~
 
@@ -91,7 +92,7 @@ echo "sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pe
 mkdir certs
 cd certs
 # touch ~/.rnd
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem -subj '/C=DE/ST=Munich' &> /dev/null
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem -subj '/C=DE/ST=Munich' > /dev/null
 sudo chmod 777 mycert.pem
 
 cd ~
@@ -106,8 +107,31 @@ echo "c.NotebookApp.port = 8888" >> ~/.jupyter/jupyter_notebook_config.py
 cd ~
 jupyter notebook
 ``` 
+To use this shell script -
+
+After connecting to EC2 instance using SSH i.e STEP 2, the terminal would be showing something like `ubuntu@SOME-IP-ADDRESS`. 
+
+In terminal do the following -
+```
+nano ec2_spark_setup.sh
+```
+and copy paste the script data to this newly created file and save it. After that
+```
+chmod 700 ec2_spark_setup.sh
+```
+And now just run the shell script by
+```
+./ec2_spark_setup.sh
+```
+
+> This script should install everything needed to get you going.
 
 You can adapt the above script for your settings such as the `spark version` as well as the `location (/C=DE/ST=Munich)`
 
 Now, we just need to change the localhost of jupyter notebook opened in the local browser to public dns of the EC2 instance and we are done.
 
+> NOTE: To use pyspark in your notebook, you need to use findspark module
+```
+import findspark
+findspark.init("/home/ubuntu/spark-2.4.5-bin-hadoop2.7")  # location of your spark directory
+```
