@@ -138,13 +138,13 @@ findspark.init("/home/ubuntu/spark-2.4.5-bin-hadoop2.7")  # location of your spa
 
 #### Troubleshoot
 
-I found that the default java installed in my AWS instance was Java 11 and because of which some spark functions weren't running (crashing).
-So, I had to change the java version in my instance to __Java 8__.
-
 As of Spark 2.4.x -
 
 Spark runs on Java 8, Python 2.7+/3.4+ and R 3.1+. 
 For the Scala API, Spark 2.4.4 uses Scala 2.12. You will need to use a compatible Scala version (2.12.x)
+
+I found that the default java installed in my AWS instance was Java 11 and because of which some spark functions weren't running (crashing).
+So, I had to change the java version in my instance to __Java 8__.
 
 If you face the same issue, you can follow the following steps - 
 ```
