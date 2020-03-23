@@ -1,4 +1,4 @@
-## NOTES from PLYMT (Python Like You Mean It)
+## NOTES from PLYMI (Python Like You Mean It)
 
 **Improving the readability of numbers:** (Python >= 3.6)
 ```
@@ -75,5 +75,59 @@ False
 ```
 
 ---
+**Else Clause At The End Of For Loop**
 
+An else clause can be added to the end of any loop (for, while). The body of this else-statement will be executed only if the loop was not exited via a ``break`` statement.
 
+One best example of it would be to find if a list is sorted or not without using an in-built function.
+
+For instance:
+
+given the iterable `my_list = [0, 1, -10, 2]`, unsorted_index should take the value `2`.
+
+given the iterable `my_list = [-1, 0, 3, 6]`, unsorted_index should be `None` and your code should print “sorted!”.
+
+```
+my_list = [0, 1, -10, 2]
+unsorted_index = None
+
+for index, current_num in enumerate(my_list):
+    if index == 0:
+        prev_num = current_num
+    elif prev_num > current_num:
+        unsorted_index = index
+        break
+    prev_num = current_num
+else:
+    print("sorted!")
+```
+
+> Befor knowing this, I used to take a flag=False and set it before break. I would check it after the for-loop end to see if the flag was set or not. Now, I know for-else :)
+
+----
+**ITERABLE**
+
+An iterable is any Python object capable of returning its members one at a time, permitting it to be iterated over in a for-loop.
+
+----
+### GENERATORS
+
+**range**
+
+range is a built-in generator, which generates sequences of integers.
+
+```
+# A very common use case!
+# start:  0  (default, included)
+#  stop:  5  (excluded)
+#  step:  1  (default)
+for i in range(5):
+    print(i, end=".. ")
+# prints: 0.. 1.. 2.. 3.. 4
+```
+
+```
+# print 10-1 using range
+for i in range(10, 0, -1):
+    print(i, end=" ")
+```
