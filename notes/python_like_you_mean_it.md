@@ -131,3 +131,8 @@ for i in range(5):
 for i in range(10, 0, -1):
     print(i, end=" ")
 ```
+
+> Defining generators does not perform any computation but just stores the object at some memory address (which can be seen when we print the generator object). This means that unlike array or other sequences we cannot perform operations like `len` or `indexing []`. The only exception to this is range which is a generator.
+
+
+
