@@ -134,5 +134,15 @@ for i in range(10, 0, -1):
 
 > Defining generators does not perform any computation but just stores the object at some memory address (which can be seen when we print the generator object). This means that unlike array or other sequences we cannot perform operations like `len` or `indexing []`. The only exception to this is range which is a generator.
 
+**consuming generators**
 
+gen can be fed to any function that accepts iterables. For instance - 
+
+```
+>>> gen = (i**2 for i in range(100))
+>>> sum(gen)  # computes the sum 0 + 1 + 4 + 9 + 25 + ... + 9801
+328350
+```
+
+The beauty of the above example is that it _executes sum without storing full sequence of numbers in memory_. In fact, at any point it stores only the current value of the sume and the numbers being added to it.
 
