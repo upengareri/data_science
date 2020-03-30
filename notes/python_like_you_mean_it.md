@@ -146,3 +146,12 @@ gen can be fed to any function that accepts iterables. For instance -
 
 The beauty of the above example is that it _executes sum without storing full sequence of numbers in memory_. In fact, at any point it stores only the current value of the sume and the numbers being added to it.
 
+**iterables vs iterators**
+
+- Every iterator is an iterable but not all iterables are iterators (iterables are subsets of iterators)
+
+- Sequences (e.g list, tuples, strings) and other containers (e.g sets, dictionaries) are iterables but not iterators. We cannot call `next()` on them.
+
+- An iterable can be made iterator by passing it to `iter()` function.
+
+- Python creates an iterator `behind the scenes` when we perform a for-loop. It feeds the iterable to iterator and calls next to it.
