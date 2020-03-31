@@ -155,3 +155,71 @@ The beauty of the above example is that it _executes sum without storing full se
 - An iterable can be made iterator by passing it to `iter()` function.
 
 - Python creates an iterator `behind the scenes` when we perform a for-loop. It feeds the iterable to iterator and calls next to it.
+
+
+**itertools**
+
+The module _itertools_ provides core set of fast, memory efficient tools for creating iterators. Some frequently used tools are -
+
+`BUILT-INS`
+
+- `range`  --> generator that generates sequence of integers in the specified 'range'
+- `enumerate`  --> enumerates over an iterable yielding tuple containing (count, item)
+- `zip`  --> zips together _corresponding_ elements of various iterables into tuple
+
+`IMPORTS`
+
+- `itertools.chain`  --> chains various iterables into one
+- `itertools.combinations`  --> gives comibnation of items in an iterable
+
+**keyword-argument**
+
+If you provide a named input, all the inputs following it must also be named:
+
+```python
+# positional arguments cannot follow named arguments
+>>> is_bounded(3, lower=2, 4)
+SyntaxError: positional argument follows keyword argument
+```
+
+**VARIABLE SCOPE**
+
+```python
+# this demonstrates scope of variables in different contexts
+# nothing meaningful is computed in this file
+
+from itertools import combinations  # `combinations` has file scope
+
+# `my_func` has file scope
+# `in_arg1` has restricted scope
+# `in_arg2` has restricted scope
+# `func_block` has restricted scope
+def my_func(in_arg1, in_arg2="cat"):
+    func_block = 1
+    return None
+
+# `file_var` has file scope
+# `comp_var` has restricted scope
+file_var = [comp_var**2 for comp_var in [-1, -2]]
+
+# `if_block` has file scope
+if True:
+    if_block = 2
+else:
+    if_block = 3
+
+# `it_var` has file scope
+# `for_block` has file scope
+for it_var in [1, 2, 3]:
+    for_block = 1
+
+# `while_block` has file scope
+while True:
+    while_block = None
+    break
+```
+
+> Takeaway: Variables defined within a function have a restricted scope such that they do not exist outside of that function. Most other contexts for defining variables in Python produce variables with file scope
+
+
+
