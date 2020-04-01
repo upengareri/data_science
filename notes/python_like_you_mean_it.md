@@ -221,5 +221,24 @@ while True:
 
 > Takeaway: Variables defined within a function have a restricted scope such that they do not exist outside of that function. Most other contexts for defining variables in Python produce variables with file scope
 
+**VARIABLE SHADOWING**
 
+What happens when a file-scope variable and a function-scope variable share the same name? This type of circumstance is known as variable shadowing. Python resolves this by giving precedence to the variable with the most restricted scope, when inside that scope:
+
+```python
+x = 2
+y = 3
+
+def func(x):
+    # input-arg `x` overrides file-scope version of `x`
+    y = 5  # overrides file-scope version of `y`
+    return x + y
+
+# `x` is 2 here, once again
+# `y` is 3 here, once again
+
+print(func(-5))  # prints 0
+print(x, y)      # prints 2  3
+```
+[Python's execution model](https://docs.python.org/3/reference/executionmodel.html)
 
