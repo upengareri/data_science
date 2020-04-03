@@ -240,5 +240,22 @@ def func(x):
 print(func(-5))  # prints 0
 print(x, y)      # prints 2  3
 ```
-[Python's execution model](https://docs.python.org/3/reference/executionmodel.html)
+Extra Reference: [Python's execution model](https://docs.python.org/3/reference/executionmodel.html)
 
+**DATA STRUCTURE**
+
+_Key notes on Big-O notation:_
+
+- We only care about the “highest-order” term in 𝑓(𝑛). That is, O(𝑛+𝑛<sup>2</sup>) should just be written as O(𝑛<sup>2</sup>).
+- We never care about constant factors in our scaling. That is, even if an algorithm iterates over a sequence twice, its big-O complexity should be written as O(𝑛), rather than O(2𝑛).
+- An algorithm whose run time does not depend on the size of its input is a O(1) algorithm.
+    - Example: a function that returns the second element from a list.
+
+_Big-O note on list:_
+
+- operations that add-to or remove-from the end of the list are O(1)
+- operations that add-to or remove-from the beginning of the list are O(𝑛)
+    - my_list.pop()	        O(1)
+    - my_list.pop(0)	    O(n)
+    - my_list.append(obj)	O(1)
+    - obj in seq	        O(n)
