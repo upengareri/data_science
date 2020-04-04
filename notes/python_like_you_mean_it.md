@@ -146,6 +146,8 @@ gen can be fed to any function that accepts iterables. For instance -
 
 The beauty of the above example is that it _executes sum without storing full sequence of numbers in memory_. In fact, at any point it stores only the current value of the sume and the numbers being added to it.
 
+---
+
 **iterables vs iterators**
 
 - Every iterator is an iterable but not all iterables are iterators (iterables are subsets of iterators)
@@ -156,6 +158,7 @@ The beauty of the above example is that it _executes sum without storing full se
 
 - Python creates an iterator `behind the scenes` when we perform a for-loop. It feeds the iterable to iterator and calls next to it.
 
+---
 
 **itertools**
 
@@ -172,6 +175,8 @@ The module _itertools_ provides core set of fast, memory efficient tools for cre
 - `itertools.chain`  --> chains various iterables into one
 - `itertools.combinations`  --> gives comibnation of items in an iterable
 
+---
+
 **keyword-argument**
 
 If you provide a named input, all the inputs following it must also be named:
@@ -181,6 +186,8 @@ If you provide a named input, all the inputs following it must also be named:
 >>> is_bounded(3, lower=2, 4)
 SyntaxError: positional argument follows keyword argument
 ```
+
+---
 
 **VARIABLE SCOPE**
 
@@ -221,6 +228,7 @@ while True:
 
 > Takeaway: Variables defined within a function have a restricted scope such that they do not exist outside of that function. Most other contexts for defining variables in Python produce variables with file scope
 
+---
 **VARIABLE SHADOWING**
 
 What happens when a file-scope variable and a function-scope variable share the same name? This type of circumstance is known as variable shadowing. Python resolves this by giving precedence to the variable with the most restricted scope, when inside that scope:
@@ -242,6 +250,7 @@ print(x, y)      # prints 2  3
 ```
 Extra Reference: [Python's execution model](https://docs.python.org/3/reference/executionmodel.html)
 
+---
 **DATA STRUCTURE**
 
 _Key notes on Big-O notation:_
@@ -259,3 +268,50 @@ _Big-O note on list:_
     - my_list.pop(0)	    O(n)
     - my_list.append(obj)	O(1)
     - obj in seq	        O(n)
+
+
+_Question: Inspecting a Dictionary_
+
+Assume we are working with a dictionary whose values are all unique numbers. Write a function that returns the key that maps to the largest value in the dictionary.
+
+Next, generalize your solution for a dictionary whose values are not necessarily unique. Return a tuple of all of the keys that map to that max value.
+
+Solution 1: Basic
+
+```python
+def max_key(d):
+    max_val = max(d.values())
+    for k, v in d.items():
+        if v == max_val:
+            return k
+```
+The downside of above solution is that we iterate over `d` twice: once via `max` and once via `for loop`. The second solution is the optimal one.
+
+Solutin 2: Optimal
+
+```python
+def max_key_optimal(d):
+    return max(d, key=d.get)
+```
+
+> To know more about the `key` function, see [key](https://docs.python.org/3/howto/sorting.html#key-functions). 
+
+Solution 3: Generic
+
+```python
+def max_key(d):
+    max_val = max(d.values())
+    return tuple(k for k,v in d.items() if v == max_val)
+```
+
+> Spend some time to think on how the function name is defined here - short and meaningful. 
+`max_key` instead of `inspect_key_for_max_val` or `inspect_maxval_key` et. al.
+---
+
+**Are Dictionaries Ordered?**
+
+In Python 3.6 and beyond dictionaries are ordered according to the order in which key-value pairs were added to the dictionary by the user. But if your code is being used for python<3.6 then it might create a bug silently if your code relied on order of the dictionary.
+
+Takeaway:
+> No matter what version of Python you are using, write your code as if the Python dictionary is unordered. If you do want to use an ordered dictionary, your code should make use of collections.OrderedDict
+
