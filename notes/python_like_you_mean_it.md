@@ -315,3 +315,27 @@ In Python 3.6 and beyond dictionaries are ordered according to the order in whic
 Takeaway:
 > No matter what version of Python you are using, write your code as if the Python dictionary is unordered. If you do want to use an ordered dictionary, your code should make use of collections.OrderedDict
 
+_Some facts about Set:_
+
+- Set is mutable and its items must be hashable, meaning we cannot add those items to set that are mutable e.g list, set.
+- Sets support `membership-checking` (O(1)) along with `iteration` (O(𝑛))
+
+_Time Complexities of Dictionaries and Sets:_
+
+O(1) operations:
+- Return the number of keys in the dictionary: `len(example_dict)`
+- Check if an object is among the dictionary’s keys: `obj in example_dict`
+- Check if a pair of objects are among the dictionary’s key-value pairs: (obj1, obj2) in example_dict.items()
+- Membership Checking in a set
+
+ O(𝑛) operations:
+- Check if an object is among the dictionary’s values: `obj in example_dict.values()`
+- Iterate over the dictionary’s keys/values/key-value pairs
+
+_Some Important Data Structures in Collections Module:_
+
+- NamedTuple
+- OrderedDict
+- DefaultDict
+- Counter
+- Deque
