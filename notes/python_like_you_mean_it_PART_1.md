@@ -1,4 +1,6 @@
-## NOTES from PLYMI (Python Like You Mean It)
+# NOTES from PLYMI (Python Like You Mean It) - PART 1
+
+## --------------- ESSENTIALS ------------------
 
 **Improving the readability of numbers:** (Python >= 3.6)
 ```
