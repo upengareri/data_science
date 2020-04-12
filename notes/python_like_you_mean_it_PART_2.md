@@ -58,5 +58,21 @@ array([ 93, 95])
 `grades[0]` was treated as `grades[0, :]`.
 
 ---
-**No data is copied when you index into an np.array using integer indices and/or slices. Recall that slicing lists and tuples do produce copies of the data.**
+
+*No data is copied when you index into an np.array using integer indices and/or slices. Recall that slicing lists and tuples do produce copies of the data.*
+
 ---
+
+Because the size of an input array and the resulting reshaped array must agree, you can specify one of the dimension-sizes in the reshape function to be -1, and this will cue NumPy to compute that dimension’s size for you. For example, if you are reshaping a shape-(36,) array into a shape-(3, 4, 3) array. 
+
+```python
+# Equivalent ways of specifying a reshape
+# np.arange(36) produces the shape-(36,) array ([0, 1, 2, ..., 35])
+np.arange(36).reshape(3, 4, 3)   # (36,) --reshape--> (3, 4, 3)
+np.arange(36).reshape(3, 4, -1)  # NumPy replaces -1 with 36/(3*4) -> 3
+np.arange(36).reshape(3, -1, 3)  # NumPy replaces -1 with 36/(3*3) -> 4
+np.arange(36).reshape(-1, 4, 3)  # NumPy replaces -1 with 36/(3*4) -> 3
+```
+
+> You can use -1 to specify only one dimension
+> Reshaping Does Not Make a Copy of an Array
