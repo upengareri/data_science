@@ -69,3 +69,59 @@ And thus we don't have to worry about `some_lock.acquire()` and `some_lock.relea
 
 ---
 
+### TODO: Writing your own context manager to handle resources
+    __Example__: Indenter and class that measures execution time of a code block
+
+---
+
+### Key Takeaways on Context Manager
+* The with statement simplifies exception handling by encapsulating standard uses of try/finally statements in so-called context managers.
+* __Most commonly it is used to manage the safe acquisition and release of system resources. Resources are acquired by the with statement and released automatically when execution leaves the with context.__
+* Using with effectively can help you avoid resource leaks and make your code easier to read.
+
+---
+
+### UNDERSCORES _
+
+__Key Takeaways__
+• Single Leading Underscore `“_var”`: Naming convention indicating a name is meant for internal use. Generally not enforced by the Python interpreter (except in wildcard imports) and meant as a hint to the programmer only.
+• Single Trailing Underscore `“var_”`: Used by convention to avoid naming conflicts with Python keywords.
+• Double Leading Underscore `“__var”`: Triggers `name mangling` when used in a class context. Enforced by the Python interpreter (to avoid name collision with subclass).
+• Double Leading and Trailing Underscore “__var__”: In- dicates special methods defined by the Python language. Avoid this naming scheme for your own attributes.
+• Single Underscore “_”: Sometimes used as a name for tem- porary or insignificant variables (“don’t care”). Also, it repre- sents the result of the last expression in a Python REPL session.
+
+---
+
+### Template String
+
+```python
+>>> templ_string = 'Hey $name, there is a $error error!' 
+>>> Template(templ_string).substitute(
+... name=name, error=hex(errno))
+'Hey Bob, there is a 0xbadc0ffee error!'
+```
+> Remember to use it whenever you have to string format _user input_ to avoid security vulnerabilities.
+
+---
+
+### Function OBJECTS and NAMES are two separate concerns
+
+```python
+def yell(text):
+    return text.upper() + "!"
+
+>>> yell('hello')
+'HELLO!'
+
+>>> bark = yell
+>>> bark('woof')
+'WOOF!'
+```
+Function objects and their names are two separate concerns. Here’s more proof: You can delete the function’s original name (yell). Since another name (bark) still points to the `underlying function` (IMPORTANT TO NOTE), you can still call the function through it:
+```python
+>>> del yell
+>>> yell('hello?')
+NameError: "name 'yell' is not defined"
+>>> bark('hey')
+'HEY!'
+```
