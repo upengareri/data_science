@@ -125,3 +125,31 @@ NameError: "name 'yell' is not defined"
 >>> bark('hey')
 'HEY!'
 ```
+---
+TODO: A clear use case understanding of `higher-order functions`, `nested functions` and special nested functions that can store local state`(lexical closures)` or simply closures.
+
+What’s a lexical closure? (child function can capture the parent function’s local state) It’s just a fancy name for a function that remembers the values from the enclosing lexical scope even when the program flow is no longer in that scope.
+
+---
+
+### Lambdas = single expression function
+Lambda functions are restricted to a single expression. This means a lambda function can’t use statements or annotations—not even a return statement.
+
+How do you return values from lambdas then? Executing a lambda function evaluates its expression and then automatically returns the expression’s result, so there’s always an implicit return state- ment. That’s why some people refer to lambdas as `single expression functions`.
+
+---
+
+### Decorators
+Decorators and closures are difficult to understand.
+Decorators takes a callable and returns a callable.
+
+Decorators takes a callable(function) puts a closure that acts as a wrapper for the input callable and then changes it's behaviour within the closure and then the decorator returns the new callable closure (child function)
+
+---
+
+### Python returns None by default
+Python adds an implicit return None statement to the end of any function. Therefore, if a function doesn’t specify a return value, it re- turns None by default.
+
+---
+
+
