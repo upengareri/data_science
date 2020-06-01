@@ -152,4 +152,37 @@ Python adds an implicit return None statement to the end of any function. Theref
 
 ---
 
+### Every class needs a `__repr__`
+
+If you don’t add a __str__ method, Python falls back on the result of __repr__ when looking for __str__. Therefore, I recommend that you always add at least a __repr__ method to your classes. This will guarantee a useful string conversion result in almost all cases, with a minimum of implementation work.
+
+Basic Example:
+```python
+class Car:
+    def __init__(self, color, mileage):
+        self.color = color
+        self.mileage = mileage
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}({self.color!r}, {self.mileage!r})"
+```
+> !r conversion flag is to make sure the output string uses repr(self.color) and repr(self.mileage) instead of str(self.color) and str(self.mileage)
+
+An optional `__str__` implementation
+```python
+def __str__(self):
+return f'a {self.color} car'
+```
+
+The result of __str__ should be readable. The result of __repr__ should be unambiguous
+
+---
+
+> TODO: Use casees of "raising exception and handling exception"
+
+When to raise exception and when to handle and how to handle other exceptions
+
+---
+
+
 
