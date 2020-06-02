@@ -183,6 +183,40 @@ The result of __str__ should be readable. The result of __repr__ should be unamb
 When to raise exception and when to handle and how to handle other exceptions
 
 ---
+### namedtuple
+`collection.namedtuple` is a memory-efficient shortcut to manually define an immutable class in Python
 
+We can make namedtuple from any sequence or iterable.
+```python
+Car = namedtuple("Car", "color mileage")
+Car._make(["red", 1234.5])
+```
+Also, it can be a replacement for a dictionary that is used only for read-only purpose.
+To elaborate more, suppose we create a dictionary that is only used for reading values then in that case we can opt for namedtuple instead of dictionary as it makes the code cleaner and easy to read.
+---
+### pitfall of accessing class variable on instance object
+Accessing class variable via an instance of that class creates a new instance variable that shadows the class variable for that instance.
+Example:
+```python
+class Dog:
+    num_legs = 4
+    def __init__(self, name):
+        self.name = name
+
+jack = Dog("jack")
+jack.num_legs = 6
+>>> jack.num_legs, jack.__class__.num_legs
+(6, 4)
+```
+From above, it should be kept in mind that now `num_legs` attribute of `jack` instance shadows the class variable `num_legs`
+
+> Class variable are for data shared by all instances of a class. Example, shared counter!
+---
+
+If a method(function within class) doesn't have any parameters and has simple definition then it is a good candidate for `@property`.
+
+TODO: read more about the use-case of `@property`
+TODO: `@classmethod`, `@staticmethod`
+---
 
 
