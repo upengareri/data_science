@@ -219,4 +219,27 @@ TODO: read more about the use-case of `@property`
 TODO: `@classmethod`, `@staticmethod`
 ---
 
+### collections.ChainMap
+This data structure groups multiple dictionaries into a single mapping
+```python
+>>> from collections import ChainMap >>> dict1 = {'one': 1, 'two': 2}
+>>> dict2 = {'three': 3, 'four': 4} >>> chain = ChainMap(dict1, dict2)
+>>> chain
+ChainMap({'one': 1, 'two': 2}, {'three': 3, 'four': 4})
+# ChainMap searches each collection in the chain
+# from left to right until it finds the key (or fails): >>> chain['three']
+3
+>>> chain['one']
+1
+>>> chain['missing']
+KeyError: 'missing'
+```
+---
 
+### important collections for dictionary
+* from collections import OrderedDict
+* from collections import defaultdict
+* from collections import Counter
+* from collections import ChainMap
+* from collections import MappingProxyType (wrapper for making read-only dict)
+---
