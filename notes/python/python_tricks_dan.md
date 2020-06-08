@@ -246,3 +246,25 @@ KeyError: 'missing'
 * from collections import ChainMap
 * from collections import MappingProxyType (wrapper for making read-only dict)
 ---
+
+### Stacks (LIFO)
+List and collections.deque are examples of stack implementations with slightly different performances.
+
+> List with append and pop gives O(1) time complexity but requires occasional resizing when elements are added or removed.
+> While popping out first or last element from deques has O(1) time complexity, accessing random element from middle has no O(1) as compared to list
+---
+
+Queues are similar to stacks, and the difference between them lies in how items are removed.
+
+Depth-First Search (DFS) uses stack.
+Breadt- First Search (BFS) uses queue.
+
+---
+
+### Queue (FIFO)
+- List can be an example of queue with terribly slow performance because inserting or deleting element at the beginning requires shifting all of the other elements by one, requiring O(n).
+- Because deques support adding and removing elements
+from either end equally well, they can serve both as queues and as
+stacks
+- collections.deque is a great default choice if you’re looking for a queue data structure in Python’s standard library
+
