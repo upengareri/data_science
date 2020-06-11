@@ -268,3 +268,73 @@ from either end equally well, they can serve both as queues and as
 stacks
 - collections.deque is a great default choice if you’re looking for a queue data structure in Python’s standard library
 
+---
+
+### Behold the beauty of `for-in` loop
+While dealing with iterators, the `for-in` loop creates an iterator object for us (by calling `__iter__`) and then calls `__next__` on that iterator object for us.
+
+Example:
+```python
+class Repeater:
+    def __init__(self, value):
+        self.value = value
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        return self.value
+```
+
+We create the repeater object
+
+```python
+repeater = Repeater("infinite_hello")
+```
+
+How `for-in` look looks for iterators -
+```python
+for val in repeater:
+    print(val)
+```
+
+What for-in loop internally does -
+
+```python
+iterator = iter(repeater)
+while True:
+    val = next(iterator)
+    print(val)
+```
+
+Similary for __generator__ objects, the `for-in` loop calls `next` on the generator object.
+
+Example of generator:
+
+```python
+def repeater(val):
+    while True:
+        yield val
+```
+
+```python
+>>> generator_obj = repeater('Hey') 
+>>> next(generator_obj)
+'Hey'
+```
+
+How `for-in` loop for generator looks
+
+```python
+for val in generator_obj:
+    print(val)
+```
+
+What it internally does -
+```python
+while True:
+    val = next(generator_obj)
+    print(val)
+```
+
+> You’ll find that for most types of iterators, writing a generator function will be easier and more readable than defining a long-winded class based iterator.
