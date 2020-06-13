@@ -338,3 +338,19 @@ while True:
 ```
 
 > You’ll find that for most types of iterators, writing a generator function will be easier and more readable than defining a long-winded class based iterator.
+
+---
+
+* Dictionaries treat keys as identical if their `__eq__` comparison result says they’re equal and their `hash` values are the same.
+
+```python
+ >>> {True: 'yes', 1: 'no', 1.0: 'maybe'}
+{True: 'maybe'}
+```
+
+---
+
+Python doesn’t have a switch/case statement. But in some cases you can avoid __long if-chains__ with a __dictionary-based dispatch table__.
+
+---
+
