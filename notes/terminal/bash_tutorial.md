@@ -94,3 +94,20 @@ For example `ls | xargs rm` will delete the files in the current directory.
 
 ---
 
+### SIGNALS
+_PAUSING AND BACKGROUND PROCESS_
+
+Example of a process in terminal
+```bash
+sleep 100
+```
+
+* to pause it - `^Z` (__SIGSTOP__)
+* to continue it (the process) in background - `bg`
+* to know about all the jobs runnings - `jobs`
+* to get the pid of a job - `pgrep <pattern>` [example - `pgrep sleep`]
+* to bring process to foreground - `fg`
+* to interrupt foreground job - `^C` (__SIGINT__)
+* to quit foreground job - `^\` (__SIGQUIT__)
+* to terminate foreground job - `kill -TERM <PID>` (__SIGTERM__)
+
