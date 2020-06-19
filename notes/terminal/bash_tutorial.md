@@ -104,7 +104,8 @@ sleep 100
 
 * to pause it - `^Z` (__SIGSTOP__)
 * to continue it (the process) in background - `bg`
-* to know about all the jobs runnings - `jobs`
+* to know about all the unfinished jobs runnings with current terminal session - `jobs`
+    it lists the process numbers or job numbers (not pid) of the jobs which can be used to `stop, kill, bg, fg etc.` using `%` symbol which is a way to refer to those jobs. example - `bg %1`
 * to get the pid of a job - `pgrep <pattern>` [example - `pgrep sleep`]
 * to bring process to foreground - `fg`
 * to interrupt foreground job - `^C` (__SIGINT__)
