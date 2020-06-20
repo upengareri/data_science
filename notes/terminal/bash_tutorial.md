@@ -112,3 +112,13 @@ sleep 100
 * to quit foreground job - `^\` (__SIGQUIT__)
 * to terminate foreground job - `kill -TERM <PID>` (__SIGTERM__)
 
+----
+
+To change prompt string - 
+```bash
+PS1="> "
+```
+In some/config.sh
+```bash
+$PS1="> "
+```
