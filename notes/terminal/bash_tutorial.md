@@ -122,3 +122,14 @@ In some/config.sh
 ```bash
 $PS1="> "
 ```
+---
+TOPICS:
+- JOB CONTROL (Inter-Process Communication)
+- ALIAS and DOT FILES
+- TMUX
+- REMOTE CONNECTION via SSH (thus using jobs, dot files and tmux)
+
+## TODO
+Configure of dot files as version control so that the development enviroment for tools like shell, tmux, git, ssh, vscode etc. remains same
+---
+
