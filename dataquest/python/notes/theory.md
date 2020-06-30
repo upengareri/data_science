@@ -38,4 +38,23 @@ Here the max and min can give us the answer for __biggest increase and decrease 
 df.iloc[row_index,column_index]
 ```
 ---
+#### Data Cleaning
 
+* Clean the column name
+    - strip()
+    - replace special characters e.g replace("(", "")
+    - big words to small abbreviations e.g replace("Operating System", "os")
+    - replace space with _
+    - lower()
+
+Workflow for converting `string` __datatype__ column to `numeric` __datatype__
+1. Explore the data in column
+- s.dtype()
+- s.unique()
+2. Identify the patterns and special cases
+3. Remove non-digit characters
+- `Series.str.method_name()` __e.g__ `s.str.replace()`
+4. Convert(cast) the column to numeric data type
+- astype() __e.g__ `s.astype(int) or s.astype(float)`
+> for checking datatypes of dataframe use `df.dtypes` attribute
+5. Rename column if required
