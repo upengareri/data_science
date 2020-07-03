@@ -40,6 +40,10 @@ df.iloc[row_index,column_index]
 ---
 #### Data Cleaning
 
+* The first step is to load the data into dataframe.
+* Next we use `df.info()` and `df.head()` to look at the data and analyse it.
+> Tip:: We can use markdown to explain our observation about the data.
+For example, data contains x rows and y columns. Most columns are of string object type. Column names have xyz pattern. Some columns contain null values although they have only 5% null values etc.
 * Clean the column name
     - strip()
     - replace special characters e.g replace("(", "")
