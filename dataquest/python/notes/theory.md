@@ -38,7 +38,7 @@ Here the max and min can give us the answer for __biggest increase and decrease 
 df.iloc[row_index,column_index]
 ```
 ---
-#### Data Cleaning
+#### Data Cleaning Workflow
 
 * The first step is to load the data into dataframe.
 * Next we use `df.info()` and `df.head()` to look at the data and analyse it.
@@ -50,8 +50,15 @@ For example, data contains x rows and y columns. Most columns are of string obje
     - big words to small abbreviations e.g replace("Operating System", "os")
     - replace space with _
     - lower()
+(one might also consider renaming of the columns to make it more expressive or easy to understand. For example `registration_year` instead of `year_of_registration`)
 
-Workflow for converting `string` __datatype__ column to `numeric` __datatype__
+* To closely look at column use - `df.info()`,`df.describe(include="all")`(for including categorical columns as well), `df.head()` and `s.value_counts()`
+
+* Think about if any column has mostly 2 values and can be dropped. For that `df.describe()` can be useful
+
+* Think about if any column needs conversion from object type to numeric type. If yes, then follow the below section step.
+
+* Workflow for converting `string` __datatype__ column to `numeric` __datatype__
 1. Explore the data in column
 - s.dtype()
 - s.unique()
@@ -62,3 +69,10 @@ Workflow for converting `string` __datatype__ column to `numeric` __datatype__
 - astype() __e.g__ `s.astype(int) or s.astype(float)`
 > for checking datatypes of dataframe use `df.dtypes` attribute
 5. Rename column if required
+
+* Next step can be to look for outlier within the column.
+`min() and max()` or `describe()` can be used to find an obvious outlier.
+
+> Good resource to understand and indentify an outlier: https://www.wikihow.com/Calculate-Outliers
+
+* After we drop all rows that show outlier, we can use aggregation methods and try to answer questions based on the dataset.
