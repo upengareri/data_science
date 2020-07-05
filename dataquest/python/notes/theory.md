@@ -76,3 +76,7 @@ For example, data contains x rows and y columns. Most columns are of string obje
 > Good resource to understand and indentify an outlier: https://www.wikihow.com/Calculate-Outliers
 
 * After we drop all rows that show outlier, we can use aggregation methods and try to answer questions based on the dataset.
+
+---
+
+
