@@ -76,7 +76,16 @@ For example, data contains x rows and y columns. Most columns are of string obje
 > Good resource to understand and indentify an outlier: https://www.wikihow.com/Calculate-Outliers
 
 * After we drop all rows that show outlier, we can use aggregation methods and try to answer questions based on the dataset.
-
 ---
 
+A scatter plot helps us determine if 2 columns are weakly or strongly correlated. While calculating the correlation coefficient will give us a precise number, a scatter plot helps us find outliers, gain a more intuitive sense of how spread out the data is, and compare more easily.
+---
 
+series.value_counts() gives us frequency distribution i.e unique values in that column along with count for each of those values.
+---
+Histograms vs Bar Plot
+
+- they both interpret frequency distribution (`groupby()` or `value_counts()`)
+
+Histograms help us visualize continuous values using bins while bar plots help us visualize discrete values. The locations of the bars on the x-axis matter in a histogram but they don't in a simple bar plot. Lastly, bar plots also have gaps between the bars, to emphasize that the values are discrete.
+---
